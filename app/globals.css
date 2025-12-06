@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-main-light text-text-primary antialiased;
+  }
+
+  /* Smooth scrolling offset for fixed header */
+  :target {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer components {
+  /* Custom button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3.5 bg-accent-orange text-white font-body text-body-md font-semibold rounded-lg transition-all duration-200 hover:bg-accent-orange-hover hover:shadow-md active:scale-[0.98];
+  }
+
+  /* Card component */
+  .service-card {
+    @apply bg-card-bg rounded-card shadow-card transition-all duration-300 hover:shadow-card-hover;
+  }
+
+  /* Section padding consistency */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* Content container */
+  .content-container {
+    @apply max-w-content mx-auto px-5 md:px-6;
+  }
+
+  .content-container-wide {
+    @apply max-w-content-wide mx-auto px-5 md:px-6;
+  }
+}
+
+@layer utilities {
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient overlay for hero */
+  .hero-gradient {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.1) 30%,
+      rgba(0, 0, 0, 0) 50%
+    );
+  }
+}
+
+/* Accordion animation */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+.accordion-content[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  overflow: hidden;
+}
