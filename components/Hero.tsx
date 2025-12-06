@@ -17,7 +17,7 @@ export default function Hero({ data }: HeroProps) {
       <div className="absolute inset-0 z-0">
         <Image
           src={backgroundImage || "/hero-bg.png"}
-          alt="Hero background"
+          alt="Achtergrondafbeelding"
           fill
           priority
           className="object-cover"

@@ -24,7 +24,7 @@ export default function AboutSection({ data }: AboutSectionProps) {
           {image ? (
             <Image
               src={image}
-              alt="About portrait"
+              alt="Portretfoto"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 448px"

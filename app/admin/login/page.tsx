@@ -39,7 +39,7 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         <div className="bg-main-light rounded-card shadow-card p-8">
           <h1 className="font-display text-2xl text-text-primary text-center mb-6">
-            Admin Login
+            Beheerder Inloggen
           </h1>
 
           <form onSubmit={handleSubmit} className="space-y-4">

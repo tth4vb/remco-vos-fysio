@@ -51,8 +51,8 @@ export default function Header({ settings }: HeaderProps) {
             <Image
               src="/logo-white.png"
               alt={settings.logoText}
-              width={32}
-              height={32}
+              width={64}
+              height={64}
               className="transition-transform duration-300 group-hover:scale-105"
             />
             <div className="flex flex-col">
@@ -95,7 +95,7 @@ export default function Header({ settings }: HeaderProps) {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5"
-            aria-label="Toggle menu"
+            aria-label="Menu openen"
           >
             <span
               className={`w-6 h-0.5 bg-text-on-dark transition-all duration-300 ${
