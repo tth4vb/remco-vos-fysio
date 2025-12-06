@@ -16,7 +16,7 @@ export default function AdminDashboard({ initialContent }: AdminDashboardProps) 
   const [isSaving, setIsSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState("");
   const [expandedSections, setExpandedSections] = useState<Set<Section>>(
-    new Set(["hero"])
+    new Set<Section>(["hero"])
   );
   const router = useRouter();
 
