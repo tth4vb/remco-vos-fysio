@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Save, LogOut, ChevronDown, ChevronUp, Eye, Plus, Trash2, GripVertical, ArrowUp, ArrowDown } from "lucide-react";
+import { Save, LogOut, ChevronDown, ChevronUp, Eye, Plus, Trash2, GripVertical, ArrowUp, ArrowDown, Download } from "lucide-react";
 import type { SiteContent } from "@/lib/content";
 import ImageUpload from "./ImageUpload";
 import BlobUsageWarning from "./BlobUsageWarning";
@@ -65,6 +65,20 @@ export default function AdminDashboard({ initialContent }: AdminDashboardProps) 
     await fetch("/api/admin/logout", { method: "POST" });
     router.push("/admin/login");
     router.refresh();
+  };
+
+  const handleDownloadBackup = () => {
+    const dataStr = JSON.stringify(content, null, 2);
+    const dataBlob = new Blob([dataStr], { type: "application/json" });
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement("a");
+    link.href = url;
+    const date = new Date().toISOString().split("T")[0];
+    link.download = `content-backup-${date}.json`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   const addService = () => {
@@ -191,6 +205,13 @@ export default function AdminDashboard({ initialContent }: AdminDashboardProps) 
               <Eye className="w-4 h-4" />
               Bekijk site
             </a>
+            <button
+              onClick={handleDownloadBackup}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-sm"
+              title="Download backup"
+            >
+              <Download className="w-4 h-4" />
+            </button>
             <button
               onClick={handleSave}
               disabled={isSaving}
