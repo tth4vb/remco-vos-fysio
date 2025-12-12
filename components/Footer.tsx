@@ -18,8 +18,8 @@ export default function Footer({ settings }: FooterProps) {
             <Image
               src="/logo-footer.png"
               alt="Remco Vos Fysio"
-              width={40}
-              height={40}
+              width={80}
+              height={80}
             />
           </div>
 
@@ -46,10 +46,15 @@ export default function Footer({ settings }: FooterProps) {
             )}
 
             {address && (
-              <div className="flex items-center gap-2 text-text-on-dark/80">
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-text-on-dark/80 hover:text-text-on-dark transition-colors duration-200"
+              >
                 <MapPin className="w-4 h-4" />
                 <span className="font-body text-footer">{address}</span>
-              </div>
+              </a>
             )}
           </div>
         </div>

@@ -3,30 +3,34 @@
     "title": "Remco Vos Fysio",
     "logoText": "Remco Vos",
     "logoSubtext": "fysio",
-    "phone": "06 10997782",
+    "phone": "06 11097182",
     "email": "remcovosfysio@hotmail.com",
-    "address": "Groevenbekerbomt 19, Harderwijk",
-    "whatsappUrl": "https://wa.me/31610997782",
+    "address": "Groevenbekerhout 19, Harderwijk",
+    "whatsappUrl": "https://wa.me/31611097182",
     "navigation": [
       {
         "id": "1",
         "label": "Diensten",
-        "targetId": "diensten"
+        "targetId": "diensten",
+        "visible": true
       },
       {
         "id": "2",
         "label": "Over mij",
-        "targetId": "over-mij"
+        "targetId": "over-mij",
+        "visible": true
       },
       {
         "id": "3",
         "label": "Contact",
-        "targetId": "contact"
+        "targetId": "contact",
+        "visible": true
       },
       {
         "id": "4",
         "label": "Contraindicaties",
-        "targetId": "contact"
+        "targetId": "contact",
+        "visible": true
       }
     ]
   },
@@ -34,7 +38,7 @@
     "title": "Sport massage en\nmedische taping voor\nhardlopers",
     "ctaLabel": "Afspraak maken",
     "ctaUrl": "#contact",
-    "backgroundImage": ""
+    "backgroundImage": "/hero-bg.png"
   },
   "services": {
     "title": "Diensten",
@@ -42,32 +46,32 @@
       {
         "id": "1",
         "title": "Kinesio Taping",
-        "image": "",
+        "image": "/kinesio_taping.png",
         "description": "Medical tape kan Kinesio Tape, een elastisch tape, of klassieke Sporttape, een niet elastische tape, zijn.\n\nKinesio Tape wordt veel toegepast in de fysiotherapie en sportwereld om blessures te behandelen, pijn te verminderen en de bloedcirculatie te verbeteren.\nKinesio Tape zit in de huid op, waardoor de doorbloeding en lymfedrainage verbeteren. Dit helpt bij pijnverlichting en sneller herstel."
       },
       {
         "id": "2",
         "title": "Deep tissue massage",
-        "image": "",
+        "image": "/sport_massage.png",
         "description": "Sportmassage is een vorm van massage die speciaal gericht is op het behandelen van spieren die intensief worden gebruikt. Bijvoorbeeld bij sporters of mensen met een actieve levensstijl. Sportmassage is dus ook geschikt voor niet sporters. Het draait bij sportmassage vooral om het masseren van gespannen en overbelaste en vermoeide spieren. ..."
       },
       {
         "id": "3",
         "title": "Klassieke Sporttape",
-        "image": "",
+        "image": "/klassiek_sporttape.png",
         "description": "De klassieke Sporttape, een niet elastisch sporttape, is een tape die gewrichten stabiliseert en in bepaalde richtingen immobiliseert om overbelasting te voorkomen. Vaak wordt deze tape gebruikt bij bijvoorbeeld enkel- of polsblessures."
       },
       {
         "id": "4",
         "title": "Trigger point Massage",
-        "image": "",
+        "image": "/triggerpoint_massage.png",
         "description": "Sportmassage is een vorm van massage die speciaal gericht is op het behandelen van spieren die intensief worden gebruikt. Bijvoorbeeld bij sporters of mensen met een actieve levensstijl. Sportmassage is dus ook geschikt voor niet sporters. Het draait bij sportmassage vooral om het masseren van gespannen en overbelaste en vermoeide spieren. ..."
       }
     ]
   },
   "about": {
     "title": "Over mij",
-    "image": "",
+    "image": "/remco.png",
     "body": "Ik heb meer dan 30 jaar ervaring in fysiotherapie, arbeidsfysiotherapie, massage, het behandelen van blessures en spierklachten en het optimaliseren van bewegingsvrijheid. Het is mijn passie om mensen te helpen pijnvrij en sterker door het leven te gaan.\n\nMet mijn brede kennis van fysiotherapie bied ik sportmassages die gericht zijn op preventie, herstel en prestatieverbetering. Mijn aanpak is persoonlijk, praktisch en doelgericht. Ieder lichaam verdient de beste zorg.\n\nIk ben getrouwd met Bernice en trotse vader van twee volwassen kinderen, Inky en Jiri. Ons gezin is niet compleet zonder onze twee corgi's, Jake en Lili, die ons dagelijks gezelschap houden tijdens wandelingen en avonturen in de natuur. Mijn vrije tijd besteed ik graag aan gravelbiken, wandelen en kamperen. Altijd op zoek naar nieuwe routes en mooie plekken om te ontdekken.\n\nKlaar om je lichaam de aandacht te geven die het verdient? Wil je weten wat ik voor jou kan betekenen? Neem dan contact op. Of boek een afspraak en ervaar de voordelen van een professionele sportmassage!",
     "signature": "Remco Vos - Jouw specialist in sportmassage.",
     "tagline": "Let's find the next level"
@@ -78,17 +82,17 @@
       {
         "id": "1",
         "title": "Contact",
-        "answer": "Neem gerust contact op via telefoon, e-mail of WhatsApp. Ik reageer zo snel mogelijk op je bericht.\n\nTelefoon: 06 10997782\nE-mail: remcovosfysio@hotmail.com\nAdres: Groevenbekerbomt 19, Harderwijk"
+        "answer": "Neem gerust contact op via telefoon, e-mail of WhatsApp. Ik reageer zo snel mogelijk op je bericht.\n\nTelefoon: 06 11097182\nE-mail: remcovosfysio@hotmail.com\nAdres: Groevenbekerhout 19, Harderwijk"
       },
       {
         "id": "2",
         "title": "Tarieven",
-        "answer": "Sportmassage 30 min: €35\nSportmassage 45 min: €45\nSportmassage 60 min: €55\n\nKinesio Taping: €15 (los) of €10 bij combinatie met massage"
+        "answer": "Bekijk onze tarieven hieronder."
       },
       {
         "id": "3",
         "title": "Openingstijden",
-        "answer": "Maandag: 09:00 - 21:00\nDinsdag: 09:00 - 21:00\nWoensdag: 09:00 - 21:00\nDonderdag: 09:00 - 21:00\nVrijdag: 09:00 - 17:00\nZaterdag: Op afspraak\nZondag: Gesloten"
+        "answer": "Bekijk onze openingstijden hieronder."
       },
       {
         "id": "4",
@@ -96,5 +100,108 @@
         "answer": "Sportmassage is niet geschikt bij:\n- Koorts of griep\n- Huidaandoeningen of open wonden\n- Trombose of bloedstollingsproblemen\n- Ontstekingen\n- Direct na een operatie\n\nBij twijfel, neem contact op voor advies."
       }
     ]
+  },
+  "pricing": {
+    "title": "Tarieven",
+    "items": [
+      {
+        "id": "1",
+        "service": "Sportmassage",
+        "duration": "30 min",
+        "price": 35
+      },
+      {
+        "id": "2",
+        "service": "Sportmassage",
+        "duration": "45 min",
+        "price": 45
+      },
+      {
+        "id": "3",
+        "service": "Sportmassage",
+        "duration": "60 min",
+        "price": 55
+      },
+      {
+        "id": "4",
+        "service": "Kinesio Taping (los)",
+        "duration": "",
+        "price": 15
+      },
+      {
+        "id": "5",
+        "service": "Kinesio Taping (bij massage)",
+        "duration": "",
+        "price": 10
+      }
+    ],
+    "note": ""
+  },
+  "openingHours": {
+    "title": "Openingstijden",
+    "days": [
+      {
+        "day": "Maandag",
+        "open": true,
+        "openTime": "09:00",
+        "closeTime": "21:00",
+        "byAppointment": false
+      },
+      {
+        "day": "Dinsdag",
+        "open": true,
+        "openTime": "09:00",
+        "closeTime": "21:00",
+        "byAppointment": false
+      },
+      {
+        "day": "Woensdag",
+        "open": true,
+        "openTime": "09:00",
+        "closeTime": "21:00",
+        "byAppointment": false
+      },
+      {
+        "day": "Donderdag",
+        "open": true,
+        "openTime": "09:00",
+        "closeTime": "21:00",
+        "byAppointment": false
+      },
+      {
+        "day": "Vrijdag",
+        "open": true,
+        "openTime": "09:00",
+        "closeTime": "17:00",
+        "byAppointment": false
+      },
+      {
+        "day": "Zaterdag",
+        "open": true,
+        "openTime": "",
+        "closeTime": "",
+        "byAppointment": true
+      },
+      {
+        "day": "Zondag",
+        "open": false,
+        "openTime": "",
+        "closeTime": "",
+        "byAppointment": false
+      }
+    ]
+  },
+  "announcement": {
+    "enabled": false,
+    "message": "",
+    "startDate": "",
+    "endDate": "",
+    "backgroundColor": "orange"
+  },
+  "whatsappButton": {
+    "enabled": true,
+    "phoneNumber": "31611097182",
+    "prefilledMessage": "Hallo, ik wil graag een afspraak maken.",
+    "position": "right"
   }
 }

@@ -12,7 +12,7 @@ export default async function AdminPage() {
     redirect("/admin/login");
   }
 
-  const content = getContent();
+  const content = await getContent();
 
   return <AdminDashboard initialContent={content} />;
 }

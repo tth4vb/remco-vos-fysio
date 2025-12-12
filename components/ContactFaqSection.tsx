@@ -2,10 +2,14 @@
 
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import type { FaqContent, FaqItem } from "@/lib/content";
+import type { FaqContent, FaqItem, PricingContent, OpeningHoursContent } from "@/lib/content";
+import PricingTable from "./PricingTable";
+import OpeningHoursTable from "./OpeningHoursTable";
 
 interface ContactFaqSectionProps {
   data: FaqContent;
+  pricing?: PricingContent;
+  openingHours?: OpeningHoursContent;
 }
 
 interface AccordionItemProps {
@@ -59,7 +63,7 @@ function AccordionItem({ item, isOpen, onToggle }: AccordionItemProps) {
   );
 }
 
-export default function ContactFaqSection({ data }: ContactFaqSectionProps) {
+export default function ContactFaqSection({ data, pricing, openingHours }: ContactFaqSectionProps) {
   const { title, items } = data;
   const [openItems, setOpenItems] = useState<Set<string>>(new Set());
 
@@ -94,6 +98,12 @@ export default function ContactFaqSection({ data }: ContactFaqSectionProps) {
             />
           ))}
         </div>
+
+        {/* Pricing Table */}
+        {pricing && <PricingTable data={pricing} />}
+
+        {/* Opening Hours Table */}
+        {openingHours && <OpeningHoursTable data={openingHours} />}
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ export async function GET() {
   }
 
   try {
-    const content = getContent();
+    const content = await getContent();
     return NextResponse.json(content);
   } catch {
     return NextResponse.json(
@@ -27,7 +27,7 @@ export async function PUT(request: NextRequest) {
 
   try {
     const content: SiteContent = await request.json();
-    saveContent(content);
+    await saveContent(content);
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json(

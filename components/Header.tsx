@@ -67,15 +67,17 @@ export default function Header({ settings }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {settings.navigation.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavClick(item.targetId)}
-                className="font-body text-nav text-text-on-dark uppercase tracking-widest hover:text-accent-orange transition-colors duration-200"
-              >
-                {item.label}
-              </button>
-            ))}
+            {settings.navigation
+              .filter((item) => item.visible !== false)
+              .map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item.targetId)}
+                  className="font-body text-nav text-text-on-dark uppercase tracking-widest hover:text-accent-orange transition-colors duration-200"
+                >
+                  {item.label}
+                </button>
+              ))}
 
             {/* WhatsApp/Phone Icon */}
             {settings.whatsappUrl && (
@@ -122,15 +124,17 @@ export default function Header({ settings }: HeaderProps) {
           }`}
         >
           <div className="flex flex-col gap-4 px-5">
-            {settings.navigation.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavClick(item.targetId)}
-                className="font-body text-nav text-text-on-dark uppercase tracking-widest text-left py-2 hover:text-accent-orange transition-colors duration-200"
-              >
-                {item.label}
-              </button>
-            ))}
+            {settings.navigation
+              .filter((item) => item.visible !== false)
+              .map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item.targetId)}
+                  className="font-body text-nav text-text-on-dark uppercase tracking-widest text-left py-2 hover:text-accent-orange transition-colors duration-200"
+                >
+                  {item.label}
+                </button>
+              ))}
             {settings.whatsappUrl && (
               <a
                 href={settings.whatsappUrl}
