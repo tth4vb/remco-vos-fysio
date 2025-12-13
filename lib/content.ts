@@ -156,10 +156,10 @@ export async function getContent(): Promise<SiteContent> {
       }
     }
 
-    // No content in Blob yet, return default and seed it
-    const defaultContent = getDefaultContent();
-    await saveContent(defaultContent);
-    return defaultContent;
+    // No content in Blob yet - return default WITHOUT seeding
+    // Seeding should only happen via explicit admin save, not on read
+    console.log("No content found in Blob storage, using defaults");
+    return getDefaultContent();
   } catch (error) {
     console.error("Error reading from Blob, falling back to file:", error);
     return getDefaultContent();
