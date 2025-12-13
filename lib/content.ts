@@ -144,6 +144,8 @@ export async function getContent(): Promise<SiteContent> {
     const { blobs } = await list({ prefix: CONTENT_BLOB_NAME });
     const contentBlob = blobs.find(b => b.pathname === CONTENT_BLOB_NAME);
 
+    console.log(`[getContent] Blob list returned ${blobs.length} items, contentBlob found: ${!!contentBlob}`);
+
     if (contentBlob) {
       // Fetch the content from the blob URL with cache busting
       const response = await fetch(contentBlob.url, {
