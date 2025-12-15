@@ -149,8 +149,7 @@ export async function getContent(): Promise<SiteContent> {
     if (contentBlob) {
       // Fetch the content from the blob URL with cache busting
       const response = await fetch(contentBlob.url, {
-        cache: 'no-store',
-        next: { revalidate: 0 }
+        cache: 'no-store'
       });
       if (response.ok) {
         const content = await response.json() as SiteContent;
