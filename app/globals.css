@@ -8,7 +8,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-main-light text-text-primary antialiased;
+    @apply bg-main-light text-text-primary antialiased font-body;
   }
 
   /* Smooth scrolling offset for fixed header */

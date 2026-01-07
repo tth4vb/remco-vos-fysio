@@ -56,10 +56,10 @@ export default function Header({ settings }: HeaderProps) {
               className="transition-transform duration-300 group-hover:scale-105"
             />
             <div className="flex flex-col">
-              <span className="font-display text-text-on-dark text-lg font-semibold leading-tight tracking-wide">
+              <span className="font-logo text-text-on-dark text-xl leading-tight">
                 {settings.logoText}
               </span>
-              <span className="font-body text-text-on-dark/80 text-xs tracking-widest italic">
+              <span className="font-logo text-text-on-dark text-xl leading-tight">
                 {settings.logoSubtext}
               </span>
             </div>

@@ -799,6 +799,52 @@ export default function AdminDashboard({ initialContent }: AdminDashboardProps) 
                               </select>
                             </div>
                           )}
+
+                          {/* Second time slot (optional) */}
+                          {!day.byAppointment && (
+                            <div className="flex items-center gap-2 mt-2">
+                              <span className="text-xs text-gray-500">2e blok:</span>
+                              <select
+                                value={day.openTime2 || ""}
+                                onChange={(e) => {
+                                  const newDays = [...content.openingHours.days];
+                                  newDays[index] = { ...newDays[index], openTime2: e.target.value };
+                                  setContent({
+                                    ...content,
+                                    openingHours: { ...content.openingHours, days: newDays },
+                                  });
+                                }}
+                                className="px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-accent-orange"
+                              >
+                                <option value="">-</option>
+                                {generateTimeOptions().map((time) => (
+                                  <option key={time} value={time}>
+                                    {time}
+                                  </option>
+                                ))}
+                              </select>
+                              <span className="text-gray-500">-</span>
+                              <select
+                                value={day.closeTime2 || ""}
+                                onChange={(e) => {
+                                  const newDays = [...content.openingHours.days];
+                                  newDays[index] = { ...newDays[index], closeTime2: e.target.value };
+                                  setContent({
+                                    ...content,
+                                    openingHours: { ...content.openingHours, days: newDays },
+                                  });
+                                }}
+                                className="px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-accent-orange"
+                              >
+                                <option value="">-</option>
+                                {generateTimeOptions().map((time) => (
+                                  <option key={time} value={time}>
+                                    {time}
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
+                          )}
                         </>
                       )}
 
@@ -809,6 +855,18 @@ export default function AdminDashboard({ initialContent }: AdminDashboardProps) 
                   </div>
                 ))}
               </div>
+
+              <InputField
+                label="Opmerking (optioneel)"
+                value={content.openingHours.note || ""}
+                onChange={(v) =>
+                  setContent({
+                    ...content,
+                    openingHours: { ...content.openingHours, note: v },
+                  })
+                }
+                placeholder="Bijv. 'Op afspraak ook andere tijden mogelijk'"
+              />
             </div>
           )}
         </div>
@@ -1145,11 +1203,13 @@ function InputField({
   value,
   onChange,
   type = "text",
+  placeholder,
 }: {
   label: string;
   value: string;
   onChange: (value: string) => void;
   type?: string;
+  placeholder?: string;
 }) {
   return (
     <div>
@@ -1160,6 +1220,7 @@ function InputField({
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-orange focus:border-transparent"
       />
     </div>

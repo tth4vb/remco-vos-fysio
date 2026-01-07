@@ -7,7 +7,7 @@ interface OpeningHoursTableProps {
 }
 
 export default function OpeningHoursTable({ data }: OpeningHoursTableProps) {
-  const { title, days } = data;
+  const { title, days, note } = data;
 
   if (!days || days.length === 0) {
     return null;
@@ -39,8 +39,14 @@ export default function OpeningHoursTable({ data }: OpeningHoursTableProps) {
                   ) : day.byAppointment ? (
                     <span className="italic">Op afspraak</span>
                   ) : (
-                    <span>
+                    <span className="whitespace-nowrap">
                       {day.openTime} - {day.closeTime}
+                      {day.openTime2 && day.closeTime2 && (
+                        <>
+                          <br />
+                          {day.openTime2} - {day.closeTime2}
+                        </>
+                      )}
                     </span>
                   )}
                 </td>
@@ -49,6 +55,12 @@ export default function OpeningHoursTable({ data }: OpeningHoursTableProps) {
           </tbody>
         </table>
       </div>
+
+      {note && (
+        <p className="mt-4 text-center font-body text-sm text-text-on-dark/60 italic">
+          {note}
+        </p>
+      )}
     </div>
   );
 }

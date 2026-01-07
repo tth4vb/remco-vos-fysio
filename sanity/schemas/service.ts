@@ -32,7 +32,8 @@ export default defineType({
     defineField({
       name: "description",
       title: "Description",
-      type: "blockContent",
+      type: "text",
+      rows: 6,
       description: "Short description of the service shown on the card",
     }),
     defineField({

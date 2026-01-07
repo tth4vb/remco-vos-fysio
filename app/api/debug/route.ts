@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { list } from "@vercel/blob";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const hasToken = !!process.env.BLOB_READ_WRITE_TOKEN;

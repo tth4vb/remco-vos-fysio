@@ -28,7 +28,8 @@ export default defineType({
     defineField({
       name: "answer",
       title: "Answer",
-      type: "blockContent",
+      type: "text",
+      rows: 6,
     }),
     defineField({
       name: "order",

@@ -19,8 +19,9 @@ const config: Config = {
         "border-light": "rgba(255, 255, 255, 0.3)",
       },
       fontFamily: {
-        display: ["var(--font-playfair)", "Georgia", "serif"],
-        body: ["var(--font-cormorant)", "Georgia", "serif"],
+        display: ["Calibri", "Carlito", "Arial", "Helvetica", "sans-serif"],
+        body: ["Calibri", "Carlito", "Arial", "Helvetica", "sans-serif"],
+        logo: ["var(--font-dm-serif)", "Georgia", "serif"],
       },
       fontSize: {
         // Hero heading

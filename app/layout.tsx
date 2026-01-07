@@ -1,33 +1,40 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Cormorant_Garamond } from "next/font/google";
+import { DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import { getContent } from "@/lib/content";
 
-const playfair = Playfair_Display({
+const dmSerif = DM_Serif_Display({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
+  variable: "--font-dm-serif",
 });
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-export const metadata: Metadata = {
-  title: "Remco Vos Fysio | Sport massage en medische taping voor hardlopers",
-  description:
-    "Professionele sportmassage en medische taping voor hardlopers in Harderwijk. Kinesio Taping, Deep tissue massage, Trigger point massage.",
-  keywords: [
-    "sportmassage",
-    "fysiotherapie",
-    "hardlopers",
-    "kinesio taping",
-    "Harderwijk",
-    "Remco Vos",
-  ],
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const content = await getContent();
+  
+  return {
+    title: content.seo.title,
+    description: content.seo.description,
+    keywords: content.seo.keywords,
+    openGraph: {
+      title: content.seo.title,
+      description: content.seo.description,
+      images: content.seo.ogImage ? [{ url: content.seo.ogImage }] : undefined,
+      locale: "nl_NL",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.seo.title,
+      description: content.seo.description,
+      images: content.seo.ogImage ? [content.seo.ogImage] : undefined,
+    },
+    icons: {
+      icon: "/favicon.png",
+      apple: "/favicon.png",
+    },
+  };
+}
 
 export default function RootLayout({
   children,
@@ -35,8 +42,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className={`${playfair.variable} ${cormorant.variable}`}>
-      <body className="font-body">{children}</body>
+    <html lang="nl" className={dmSerif.variable}>
+      <body>{children}</body>
     </html>
   );
 }

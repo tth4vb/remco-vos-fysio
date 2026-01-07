@@ -1,4 +1,16 @@
 {
+  "seo": {
+    "title": "Remco Vos Fysio | Sport massage en medische taping voor hardlopers",
+    "description": "Professionele sportmassage en medische taping voor hardlopers in Harderwijk. Kinesio Taping, Deep tissue massage, Trigger point massage.",
+    "keywords": [
+      "sportmassage",
+      "fysiotherapie",
+      "hardlopers",
+      "kinesio taping",
+      "Harderwijk",
+      "Remco Vos"
+    ]
+  },
   "siteSettings": {
     "title": "Remco Vos Fysio",
     "logoText": "Remco Vos",
@@ -12,6 +24,12 @@
         "id": "1",
         "label": "Diensten",
         "targetId": "diensten",
+        "visible": true
+      },
+      {
+        "id": "5",
+        "label": "Tarieven",
+        "targetId": "tarieven",
         "visible": true
       },
       {
@@ -30,7 +48,7 @@
         "id": "4",
         "label": "Contraindicaties",
         "targetId": "contact",
-        "visible": true
+        "visible": false
       }
     ]
   },
@@ -38,7 +56,7 @@
     "title": "Sport massage en\nmedische taping voor\nhardlopers",
     "ctaLabel": "Afspraak maken",
     "ctaUrl": "#contact",
-    "backgroundImage": "/hero-bg.png"
+    "backgroundImage": "/sport_massage.png"
   },
   "services": {
     "title": "Diensten",
@@ -106,81 +124,85 @@
     "items": [
       {
         "id": "1",
-        "service": "Sportmassage",
-        "duration": "30 min",
-        "price": 35
+        "service": "Intake (eenmalig)",
+        "duration": "10 min",
+        "price": 10.50
       },
       {
         "id": "2",
         "service": "Sportmassage",
-        "duration": "45 min",
-        "price": 45
+        "duration": "30 min",
+        "price": 32.50
       },
       {
         "id": "3",
         "service": "Sportmassage",
-        "duration": "60 min",
-        "price": 55
+        "duration": "45 min",
+        "price": 49.50
       },
       {
         "id": "4",
-        "service": "Kinesio Taping (los)",
-        "duration": "",
-        "price": 15
+        "service": "Sportmassage aan huis",
+        "duration": "45 min",
+        "price": 69.50
       },
       {
         "id": "5",
-        "service": "Kinesio Taping (bij massage)",
-        "duration": "",
-        "price": 10
+        "service": "Medical Taping",
+        "duration": "15-20 min",
+        "price": 15.00
       }
     ],
-    "note": ""
+    "note": "Sportmassage aan huis: exclusief reiskostenvergoeding van €0,32 per kilometer"
   },
   "openingHours": {
     "title": "Openingstijden",
     "days": [
       {
         "day": "Maandag",
-        "open": true,
-        "openTime": "09:00",
-        "closeTime": "21:00",
+        "open": false,
+        "openTime": "",
+        "closeTime": "",
         "byAppointment": false
       },
       {
         "day": "Dinsdag",
-        "open": true,
-        "openTime": "09:00",
-        "closeTime": "21:00",
+        "open": false,
+        "openTime": "",
+        "closeTime": "",
         "byAppointment": false
       },
       {
         "day": "Woensdag",
-        "open": true,
-        "openTime": "09:00",
-        "closeTime": "21:00",
+        "open": false,
+        "openTime": "",
+        "closeTime": "",
         "byAppointment": false
       },
       {
         "day": "Donderdag",
         "open": true,
-        "openTime": "09:00",
-        "closeTime": "21:00",
+        "openTime": "14:00",
+        "closeTime": "17:00",
+        "openTime2": "19:00",
+        "closeTime2": "21:00",
         "byAppointment": false
       },
       {
         "day": "Vrijdag",
         "open": true,
-        "openTime": "09:00",
+        "openTime": "14:00",
         "closeTime": "17:00",
+        "openTime2": "19:00",
+        "closeTime2": "21:00",
         "byAppointment": false
       },
       {
         "day": "Zaterdag",
         "open": true,
-        "openTime": "",
-        "closeTime": "",
-        "byAppointment": true
+        "openTime": "14:00",
+        "closeTime": "17:00",
+        "byAppointment": false
       },
       {
         "day": "Zondag",
@@ -189,7 +211,8 @@
         "closeTime": "",
         "byAppointment": false
       }
-    ]
+    ],
+    "note": "Andere afspraken in overleg mogelijk. Neem contact op voor de mogelijkheden."
   },
   "announcement": {
     "enabled": false,

@@ -4,6 +4,8 @@ import service from "./service";
 import faqItem from "./faqItem";
 import navigationItem from "./navigationItem";
 import blockContent from "./blockContent";
+import pricingItem from "./pricingItem";
+import dayHours from "./dayHours";
 
 export const schemaTypes = [
   // Singletons
@@ -15,4 +17,6 @@ export const schemaTypes = [
   navigationItem,
   // Object types
   blockContent,
+  pricingItem,
+  dayHours,
 ];
