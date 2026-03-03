@@ -4,13 +4,15 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone } from "lucide-react";
-import type { SiteSettings } from "@/lib/content";
+import type { SiteSettings, AnnouncementBanner as AnnouncementBannerType } from "@/lib/content";
+import AnnouncementBanner from "./AnnouncementBanner";
 
 interface HeaderProps {
   settings: SiteSettings;
+  announcement?: AnnouncementBannerType;
 }
 
-export default function Header({ settings }: HeaderProps) {
+export default function Header({ settings, announcement }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -39,6 +41,9 @@ export default function Header({ settings }: HeaderProps) {
           : "bg-transparent"
       }`}
     >
+      {/* Announcement Banner */}
+      {announcement && <AnnouncementBanner data={announcement} />}
+
       {/* Gradient overlay when not scrolled */}
       {!isScrolled && (
         <div className="absolute inset-0 hero-gradient pointer-events-none" />

@@ -6,7 +6,6 @@ import PricingHoursSection from "@/components/PricingHoursSection";
 import AboutSection from "@/components/AboutSection";
 import ContactFaqSection from "@/components/ContactFaqSection";
 import Footer from "@/components/Footer";
-import AnnouncementBanner from "@/components/AnnouncementBanner";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 // Force dynamic to always read fresh content
@@ -18,8 +17,7 @@ export default async function Home() {
 
   return (
     <>
-      <AnnouncementBanner data={content.announcement} />
-      <Header settings={content.siteSettings} />
+      <Header settings={content.siteSettings} announcement={content.announcement} />
       <main>
         <Hero data={content.hero} />
         <ServicesGrid data={content.services} />
